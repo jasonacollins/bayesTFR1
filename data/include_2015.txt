@@ -1,12 +1,12 @@
 "name"	"country_code"	"include_code"
-"WORLD"	900	0
+"WORLD"	900	1
 "More developed regions"	901	0
 "Less developed regions"	902	0
 "Least developed countries"	941	0
 "Other less developed countries"	934	0
 "Less developed regions, excluding China"	948	0
 "Sub-Saharan Africa"	947	0
-"AFRICA"	903	0
+"AFRICA"	903	1
 "Eastern Africa"	910	0
 "Burundi"	108	2
 "Comoros"	174	2
@@ -70,7 +70,7 @@
 "Senegal"	686	2
 "Sierra Leone"	694	2
 "Togo"	768	2
-"ASIA"	935	0
+"ASIA"	935	1
 "Eastern Asia"	906	0
 "China"	156	2
 "China, Hong Kong SAR"	344	2
@@ -128,7 +128,7 @@
 "Turkey"	792	2
 "United Arab Emirates"	784	2
 "Yemen"	887	2
-"EUROPE"	908	0
+"EUROPE"	908	1
 "Eastern Europe"	923	0
 "Belarus"	112	2
 "Bulgaria"	100	2
@@ -181,7 +181,7 @@
 "Monaco"	492	2
 "Netherlands"	528	2
 "Switzerland"	756	2
-"LATIN AMERICA AND THE CARIBBEAN"	904	0
+"LATIN AMERICA AND THE CARIBBEAN"	904	1
 "Caribbean"	915	0
 "Anguilla"	660	2
 "Antigua and Barbuda"	28	2
@@ -233,13 +233,13 @@
 "Suriname"	740	2
 "Uruguay"	858	2
 "Venezuela (Bolivarian Republic of)"	862	2
-"NORTHERN AMERICA"	905	0
+"NORTHERN AMERICA"	905	1
 "Bermuda"	60	2
 "Canada"	124	2
 "Greenland"	304	2
 "Saint Pierre and Miquelon"	666	2
 "United States of America"	840	2
-"OCEANIA"	909	0
+"OCEANIA"	909	1
 "Australia/New Zealand"	927	0
 "Australia"	36	2
 "New Zealand"	554	2
