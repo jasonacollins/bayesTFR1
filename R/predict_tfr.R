@@ -520,33 +520,11 @@ make.tfr.prediction <- function(mcmc.set, start.year=NULL, end.year=2100, replac
 					        maxf <- 10
 					        probf <- oldtfr / maxf
 					        #The frequency of families with i children in generation t=0
-					        lambda0 <- dbinom(0, size=maxf, prob=probf)
-					        lambda1 <- dbinom(1, size=maxf, prob=probf)
-					        lambda2 <- dbinom(2, size=maxf, prob=probf)
-					        lambda3 <- dbinom(3, size=maxf, prob=probf)
-					        lambda4 <- dbinom(4, size=maxf, prob=probf)
-					        lambda5 <- dbinom(5, size=maxf, prob=probf)
-					        lambda6 <- dbinom(6, size=maxf, prob=probf)
-					        lambda7 <- dbinom(7, size=maxf, prob=probf)
-					        lambda8 <- dbinom(8, size=maxf, prob=probf)
-					        lambda9 <- dbinom(9, size=maxf, prob=probf)
-					        lambda10 <- dbinom(10, size=maxf, prob=probf)
+					        lambda <- dbinom(0:10, size=maxf, prob=probf)
 					        #Proportion of children who are in a family with i children
-					        pi0<-0
-					        pi1<-1*lambda1/oldtfr
-					        pi2<-2*lambda2/oldtfr
-					        pi3<-3*lambda3/oldtfr
-					        pi4<-4*lambda4/oldtfr
-					        pi5<-5*lambda5/oldtfr
-					        pi6<-6*lambda6/oldtfr
-					        pi7<-7*lambda7/oldtfr
-					        pi8<-8*lambda8/oldtfr
-					        pi9<-9*lambda9/oldtfr
-					        pi10<-10*lambda10/oldtfr
+					        pi <- c(0:10) * lambda / oldtfr
 					        #Mean number of children each child has in its family 
-					        kids<-c(0,1,2,3,4,5,6,7,8,9,10)
-					        pikids<-c(pi0,pi1,pi2,pi3,pi4,pi5,pi6,pi7,pi8,pi9,pi10)
-					        kidstfr<-sum(kids*pikids)
+					        kidstfr <- sum(c(0:10) * pi)
 					        h2g <- h2/6 #approximates 30 years per generation
 					        new.tfr <- (oldtfr + h2g*(kidstfr - oldtfr) - W[icountry,year]*S11[icountry])
 					    } else {
